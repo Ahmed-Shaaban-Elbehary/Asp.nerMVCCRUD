@@ -10,24 +10,23 @@ let's start the project.
 1 - Create Models folder.
 2 - create cs file named DbContext - DbContainer <- will Manage "transactions-processes" between you and the database using entityframeworks.
 
-                                        public DbContainer(DbContextOptions<DbContainer> options):base(options)
-                                                { }
+public DbContainer(DbContextOptions<DbContainer> options):base(options){ }
                                                 
                                                 
 We have two main files "Startup.cs - appsettings" 
 
 
-4 - appsetting is a json file of some setting in our project in our example we define the connectionStrings.
+4 - appsetting is a json file of some setting in our project in our example we define the connectionStrings
 
-                                        "ConnectionStrings": {
-                                            "DefaultConnection": "Server = .\\SQLEXPRESS; Database = Employees_Db; Trusted_Connection = True; MultipleActiveResultSets = True"
-                                          },
+"ConnectionStrings": {
+  "DefaultConnection": "Server = .\\SQLEXPRESS; Database = Employees_Db; Trusted_Connection = True; MultipleActiveResultSets = True"
+},
 
 5 - then using it in startup.cs 
 
-                          services.AddDbContext<DbContainer>(
-                                          options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
-                                          );
+services.AddDbContext<DbContainer>(
+    options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
+ );
                                           
 6 - Create your first table in our case { Employee.cs }
 
