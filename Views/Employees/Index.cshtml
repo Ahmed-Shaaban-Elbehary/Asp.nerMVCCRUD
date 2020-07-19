@@ -5,27 +5,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@section Scripts{
-<script>
-    $(function () {
-        $("#btn-delete").click(function () {
-            $.confirm({
-                title: 'Confirm!',
-                content: 'Are You Sure You Need To Delete This Employee',
-                buttons: {
-                    confirm: function () {
-                        $.alert('Confirmed!');
-                    },
-                    cancel: function () {
-                        $.alert('Canceled!');
-                    },
-                },
-                theme: 'Material'
-            });
-        });
-    });
-</script>
-}
 <h4>Employees</h4>
 
 <table class="table table-hover text-center">
@@ -66,7 +45,9 @@
                 </td>
                 <td>
                     <a asp-action="AddOrEdit" asp-route-id="@item.Id"><i class="fa fa-marker fa-lg"></i></a> |
-                    <a id="btn-delete" asp-action="Delete" asp-route-id="@item.Id" onclick="confirm('Are You Sure You Need To Delete This Employee?!')"><i class="fa fa-trash fa-lg text-danger"></i></a>
+                    <a id="btn-delete" asp-action="Delete" asp-route-id="@item.Id" 
+                       onclick="confirm('Are You Sure You Need To Delete This Employee?!')">
+                    <i class="fa fa-trash fa-lg text-danger"></i></a>
                 </td>
             </tr>
         }
