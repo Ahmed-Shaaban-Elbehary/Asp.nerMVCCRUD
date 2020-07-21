@@ -2,7 +2,7 @@
 
 ASP.NET CORE MVC CRUD operation Quick Demo
 
-Let's take about steps of starting the project 
+#steps of starting the project 
 
 first of all we need to install Microsoft.Entityframeworkcore, Microsoft.Entityframeworkcore.sqlserver, Microsoft.Entityframeworkcore.tools
 
