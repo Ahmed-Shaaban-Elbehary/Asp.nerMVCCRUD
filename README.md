@@ -1,5 +1,6 @@
-# Asp.nerMVCCRUD
-ASP.NET CORE MVC CRUD operation tutorial
+# Asp.netCoreCrudOperationInMvc
+
+ASP.NET CORE MVC CRUD operation Quick Demo
 
 Let's take about steps of starting the project 
 
