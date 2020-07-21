@@ -28,15 +28,15 @@ We have two main files "Startup.cs - appsettings"
         options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
      );
                                           
-6 - Create your first table in our case { Employee.cs }
+6 - Create your first table in our case Employee.cs
 
 Using migration to create our database and tables.
 
-7 - using Package Manager Console to use it (Tools -> Nuget Package Manager -> Package Manager Console)
+7 - in Package Manager Console to use it (Tools -> Nuget Package Manager -> Package Manager Console)
 
-8 - type Add-Migration "InitialModel" will create new folder called migration contain the design of our database tables.
+8 - type ( Add-Migration "InitialModel" ) will create new folder called migration contain the design of our database tables.
 
-9 - then type Update-Database 
+9 - then type ( Update-Database )
 
 10 - go to sql server and check the new table.
 
